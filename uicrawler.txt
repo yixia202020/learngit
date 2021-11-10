@@ -1,0 +1,72 @@
+﻿1、https://testerhome.com/topics/14490  详细说明
+2、https://github.com/lgxqf/UICrawler github地址说明
+
+先通过自带的-h 命令检查 UICrawler-2.0 是否正常
+
+D:\UICrawler>java -jar UICrawler-2.0.jar -h
+15:32:08.083 [main] INFO  Crawler -     -h  Print this usage information
+    -a  Android package's main activity
+    -b  iOS bundle id
+    -c  Maximum click count
+    -f  Yaml config  file
+    -m  run monkey
+    -p  Android package name
+    -t  Appium port
+    -u  Device serial
+    -w  wda port for ios
+	
+
+java -jar 	UICrawler-2.0.jar -f config.yml  -u 设备id  #config.yml 存放路径：/user/yixia/,如果放在其他地址会报错找不到文件
+
+报告路径：C:\Users\yixia\crawler_output
+log路径：C:\Users\yixia\log
+
+adb shell monkey -p com.dubmic.dubmic --monitor-native-crashes --throttle 3000 --pct-touch 10 --pct-motion 30 --pct-trackball 50 --pct-syskeys 2 --pct-appswitch 6 --pct-nav 2 -s 1000 -v -v -v 2500000
+adb shell monkey -p com.yixia.youguo --monitor-native-crashes --throttle 3000 --pct-touch 10 --pct-motion 40 --pct-trackball 50  -s 1000 -v -v -v 2500000
+com.dubmic.dubmic	
+com.yixia.videoeditor
+com.yixia.knowvideos
+com.yixia.youguo
+ com.dubmic.talk
+
+
+monkey常见错误
+java.lang.nullpointerexception    空指针异常
+java.lang.arrayindexoutofboundsexception    数组溢出
+java.lang.classnotfoundexception   类不存在
+java.lang.arithmeticexception   数学运算异常
+java.lang.illegalargumentexception   方法参数异常
+java.io.filenotfoundexception  文件未找到
+java.lang.numberformatexception 数值转化异常
+java.lang.stackoverflowerror    堆异常错误
+java.lang.outofmemoryerror    内存溢出错误
+
+
+
+
+
+
+adb shell dumpsys activity activities
+
+
+
+
+秒拍：
+
+versionCode 6790100
+versionName "7.2.88"
+
+
+Airtestide  命令行运行
+
+D:\AirtestIDE-win-1.2.7\AirtestIDE\AirtestIDE.exe  runner D:\AirtestIDE-win-1.2.7\AirtestIDE\toutiao.air  --log c:desktop/log.txt
+
+
+
+
+
+
+
+
+
+
